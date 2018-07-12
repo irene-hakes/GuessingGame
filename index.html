@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guessing Game</title>
+
+    <!-- Bootstrap and CSS here-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Baskerville|Open+Sans" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id='app' class='center container'>
+
+        <div id='headers'>
+          <h1 class='title'>Play the Guessing Game!</h1>
+          <h3 id='subtitle'>Guess a number between 1-100!</h3>
+        </div>
+
+      <div id='main'>
+        <div id='input-parent'>
+          <input id='players-input' class='center' placeholder="#" maxlength='3'</input>
+          <button id='submit' class='btn btn-success'>Go!</button>
+        </div>
+
+          <div id='guesses'>
+            <ul id='guess-list'>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+            </ul>
+          </div>
+
+        <div id="menu-btns">
+          <button class='btn btn-info' id='hint'>Need a Hint?</button>
+          <button class='btn btn-danger' id='reset'>RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <div id='footer' class='center'>
+      <div class='row'>
+        <div class='col-sm-4'>
+          <img src='project_directory/fa-logo@2x.png'></img>
+        </div>
+
+        <div class='col-sm-4'>
+          <h4>Project by Irene Hakes</h4>
+        </div>
+
+        <div class='col-sm-4'>
+          <img src='project_directory/grace_hopper_academy.png'></img>
+        </div>
+
+
+      </div>
+    </div>
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+    <script src='GuessingGame.js'></script>
+  </body>
+</html>

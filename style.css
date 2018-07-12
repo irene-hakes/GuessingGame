@@ -1,0 +1,101 @@
+html {
+    box-sizing: 'border-box';
+}
+body {
+    background-color: rgb(218, 218, 218);
+}
+.center {
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+img {
+    display: inline;
+    height: 50px;
+}
+.title {
+    font-family: 'Abril Fatface', serif;
+    font-size: 80px;
+}
+.duringGame{
+    font-family: 'Avenir';
+    font-size: 80px;
+}
+.duringGame-cold{
+    color: #5bc0de;
+    font-family: 'Avenir';
+    font-size: 80px;
+    font-weight: bold;
+}
+.duringGame-hot {
+    color: #c9302c;
+    font-family: 'Avenir';
+    font-size: 80px;
+    font-weight: bold;
+}
+.winner {
+    font-size: 240px;
+}
+#subtitle{
+    font-family: 'Avenir';
+}
+#footer {
+    width: 100%;
+    border-top: dotted 2px black;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Avenir';
+}
+#players-input {
+    width: 320px;
+    height: 320px;
+    border: dotted 6px orange;
+    border-radius: 50%;
+    margin-top: 25px;
+    font-size: 120px;
+    text-align: center;
+}
+#submit {
+    position: absolute;
+    top: 220px;
+    left: 220px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 25px;
+    font-size: 40px;
+    box-shadow: 5px 10px 5px grey;
+}
+
+.guess {
+    display: inline;
+    font-size: 60px;
+    border: solid 0.5px orange;
+    background-color: white;
+    padding: 0 25px;
+    border-radius: 10%;
+    margin: 10px;
+    box-shadow: 2px 5px 5px grey;
+}
+#input-parent {
+    position: relative;
+    width: 320px;
+    margin: 5% auto 50px;
+}
+#guesses {
+    margin: 25px;
+}
+#hint {
+    margin-top: 30px;
+    box-shadow: 2px 5px 5px grey;
+}
+#reset {
+    margin-top: 30px;
+    box-shadow: 2px 5px 5px grey;
+}
+#title {
+    font-size: 80px;
+}
