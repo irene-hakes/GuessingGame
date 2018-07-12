@@ -108,11 +108,12 @@ function makeAGuess(game) {
         if(result === 'We have a winner!') {
             $('.title').addClass('winner');
             $('.title, .winner').text(result);
-            $('#input-parent, #guesses').hide();
+            $('#input-parent, #guesses, #hint').hide();
         }else {
             $('.title').text(result);
             $('#subtitle').text(`The winning number was: ${game.winningNumber}.`)
             $('#hint, #submit, #players-input').prop("disabled", true);
+            $('#hint').hide();
         }
     }
 
@@ -143,6 +144,6 @@ $(document).ready( function() {
         $('#subtitle').text('Guess a number between 1-100!');
         $('.guess').text('-');
         $('#hint, #submit, #players-input').prop("disabled", false);
-        $('#input-parent, #guesses').show();
+        $('#input-parent, #guesses, #hint').show();
     })
 })
