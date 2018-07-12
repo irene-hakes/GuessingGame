@@ -105,7 +105,7 @@ function makeAGuess(game) {
     }else {
         $('.title, .duringGame-hot').removeClass('duringGame-hot');
         $('.title, .duringGame-cold').removeClass('duringGame-cold');
-        if(result = 'We have a winner!') {
+        if(result === 'We have a winner!') {
             $('.title').addClass('winner');
             $('.title, .winner').text(result);
             $('#input-parent, #guesses').hide();
