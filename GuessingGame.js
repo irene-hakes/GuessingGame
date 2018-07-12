@@ -111,6 +111,7 @@ function makeAGuess(game) {
             $('#input-parent, #guesses').hide();
         }else {
             $('.title').text(result);
+            $('#subtitle').text(`The winning number was: ${game.winningNumber}.`)
         }
     }
 
