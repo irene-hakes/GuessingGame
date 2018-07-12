@@ -52,7 +52,7 @@ Game.prototype.checkGuess = function() {
     this.pastGuesses.push(this.playersGuess);
     $('#guess-list li:nth-child(' + this.pastGuesses.length +')').text(this.playersGuess);
     if(this.pastGuesses.length === 5) {
-        $('#hint, #submit').prop("ddisabled",true);
+        $('#hint, #submit').prop("disabled",true);
         $('#subtitle').text("Press the Reset button to play again!");
         return 'You Lose :(';
     }
