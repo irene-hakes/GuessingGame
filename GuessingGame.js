@@ -31,7 +31,8 @@ Game.prototype.isLower = function() {
 
 Game.prototype.playersGuessSubmission = function(guess) {
     if(typeof guess !== 'number' || guess < 1 || guess > 100) {
-        throw 'That is an invalid guess.'
+        $('#subtitle').text("Please enter a number between 1 and 100!");
+        throw 'That is an invalid guess.';
     }
     this.playersGuess = guess;
     return this.checkGuess();
@@ -95,7 +96,6 @@ function newGame() {
 function makeAGuess(game) {
     var guess = +$('#players-input').val();
     var result = game.playersGuessSubmission(guess);
-    // $('.title').addClass('duringGame');
     if(result === `You're a bit chilly.` || result === `You're ice cold!`) {
         $('.title').addClass('duringGame-cold');
         $('.title, .duringGame-cold').text(result);
@@ -112,6 +112,7 @@ function makeAGuess(game) {
         }else {
             $('.title').text(result);
             $('#subtitle').text(`The winning number was: ${game.winningNumber}.`)
+            $('#hint, #submit, #players-input').prop("disabled", true);
         }
     }
 
@@ -125,7 +126,6 @@ $(document).ready( function() {
     })
     $('#players-input').keypress(function(event) {
         if( event.which == 13 ) {
-            console.log('You hit enter!');
             makeAGuess(game);
             $('#players-input').val("");
         }
@@ -142,7 +142,7 @@ $(document).ready( function() {
         $('.title, .winner').removeClass('winner');
         $('#subtitle').text('Guess a number between 1-100!');
         $('.guess').text('-');
-        $('#hint, #submit').prop("disabled", false);
+        $('#hint, #submit, #players-input').prop("disabled", false);
         $('#input-parent, #guesses').show();
     })
 })
